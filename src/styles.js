@@ -5,6 +5,7 @@ export const GlobalStyle = createGlobalStyle`
 	*::before,
 	*::after {
 		box-sizing: border-box;
+
 	}
 
 	html {
@@ -12,7 +13,14 @@ export const GlobalStyle = createGlobalStyle`
 	}
 
 	body {
+		display: flex;
+		flex-direction: column;
 		margin: 0;
+		padding: 0;
 		font-size: 1rem;
+	}
+
+	table {
+		/* border-collapse: collapse; */
 	}
 `;

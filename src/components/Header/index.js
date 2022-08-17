@@ -1,12 +1,14 @@
 import Link from 'next/link';
 
+import StyledHeaderContainer from './StyledHeaderContainer';
+
 export default function Header() {
 	return (
-		<header>
+		<StyledHeaderContainer>
 			<nav>
 				<Link href="/">Home</Link>
 				<Link href="/about">About me</Link>
 			</nav>
-		</header>
+		</StyledHeaderContainer>
 	);
 }
