@@ -11,19 +11,19 @@ import RunDataForm from '../RunDataForm';
  */
 
 const StyledTableContainer = Styled.table`
- width: 90vw;
- margin: 50px auto;
- border: 2px solid black;
+	width: 90vw;
+	margin: 50px auto;
+	border: 2px solid black;
  `;
 
 const StyledTRHead = Styled.tr`
 	background-color: #cce1f5;
 `;
 const StyledTRBody = Styled.tr`
-background-color: #ddebf8;
+	background-color: #ddebf8;
 `;
 const StyledColumnTitle = Styled.th`
-padding: 5px 0;
+	padding: 5px 0;
 `;
 const StyledEntries = Styled.td`
 	padding: 5px 0;
@@ -36,10 +36,8 @@ const StyledEntries = Styled.td`
 
 export default function DataTable() {
 	const [runData, setRunData] = useState(mockData);
-	console.log(runData);
 
 	function addRunningData(event) {
-		console.log(event);
 		setRunData([...runData, {id: nanoid(), ...event}]);
 	}
 

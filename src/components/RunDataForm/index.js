@@ -22,7 +22,6 @@ const StyledInput = Styled.input`
 const StyledSubmitButton = Styled.button`
 	width: 60%;
 	margin: auto;
-
 `;
 
 /**
