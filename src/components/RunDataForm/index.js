@@ -104,9 +104,7 @@ export default function RunDataForm({onAddRunData}) {
 					{...register('pain', {
 						maxLength: 2,
 						max: 10,
-						validate: {
-							positive: v => parseInt(v) >= 0,
-						},
+						min: 0,
 					})}
 					name="pain"
 					placeholder="0 - 10"
