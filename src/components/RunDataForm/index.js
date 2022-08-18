@@ -1,25 +1,25 @@
 import {useForm} from 'react-hook-form';
-import Styled from 'styled-components';
+import styled from 'styled-components';
 
 /**
  * ##################### STYLING #####################
  */
 
-const StyledForm = Styled.form`
+const StyledForm = styled.form`
 	display: flex;
 	flex-direction: column;
 	width: 70vw;
 	margin: 50px auto;
 `;
 
-const StyledInput = Styled.input`
+const StyledInput = styled.input`
 	margin: 0 0 10px 0;
 	&::placeholder {
 		color: #c2c2c2;
-}
+	}
 `;
 
-const StyledSubmitButton = Styled.button`
+const StyledSubmitButton = styled.button`
 	width: 60%;
 	margin: auto;
 `;

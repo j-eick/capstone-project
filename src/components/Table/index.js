@@ -1,7 +1,7 @@
 // import {useState} from 'react';
 import {nanoid} from 'nanoid';
 import {useState} from 'react';
-import Styled from 'styled-components';
+import styled from 'styled-components';
 
 import mockData from '../lib/mock-data.json';
 import RunDataForm from '../RunDataForm';
@@ -10,22 +10,22 @@ import RunDataForm from '../RunDataForm';
  * ##################### STYLING #####################
  */
 
-const StyledTableContainer = Styled.table`
+const StyledTableContainer = styled.table`
 	width: 90vw;
 	margin: 50px auto;
 	border: 2px solid black;
- `;
+`;
 
-const StyledTRHead = Styled.tr`
+const StyledTRHead = styled.tr`
 	background-color: #cce1f5;
 `;
-const StyledTRBody = Styled.tr`
+const StyledTRBody = styled.tr`
 	background-color: #ddebf8;
 `;
-const StyledColumnTitle = Styled.th`
+const StyledColumnTitle = styled.th`
 	padding: 5px 0;
 `;
-const StyledEntries = Styled.td`
+const StyledEntries = styled.td`
 	padding: 5px 0;
 	text-align: center;
 `;

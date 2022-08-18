@@ -19,8 +19,4 @@ export const GlobalStyle = createGlobalStyle`
 		padding: 0;
 		font-size: 1rem;
 	}
-
-	table {
-		/* border-collapse: collapse; */
-	}
 `;
