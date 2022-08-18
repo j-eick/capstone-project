@@ -29,7 +29,7 @@ const StyledSubmitButton = Styled.button`
  * ##################### COMPONENT #####################
  */
 
-export default function RunDataForm({onAddRunningData}) {
+export default function RunDataForm({onAddRunData}) {
 	const {
 		register,
 		handleSubmit,
@@ -38,7 +38,7 @@ export default function RunDataForm({onAddRunningData}) {
 	} = useForm();
 
 	function onSubmit(event) {
-		onAddRunningData(event);
+		onAddRunData(event);
 		reset();
 	}
 
@@ -64,7 +64,8 @@ export default function RunDataForm({onAddRunningData}) {
 					{...register('time', {
 						required: true,
 						maxLength: 8,
-						pattern: /^(?:(?:([01]?\d|2[0-3]):)?([0-5]?\d):)?([0-5]?\d)$/,
+						minLength: 5,
+						pattern: /^(?:(?:([01]?\d|2[0-3]):)?([0-5]?\d):?)([0-5]?\d)$/,
 					})}
 					name="time"
 					placeholder="format  ➡  hh:mm:ss"
@@ -75,6 +76,7 @@ export default function RunDataForm({onAddRunningData}) {
 					id="pace"
 					{...register('pace', {
 						maxLength: 5,
+						minLength: 5,
 						pattern: /^(?:([0-5]?\d):)?([0-5]?\d)$/,
 					})}
 					name="pace"

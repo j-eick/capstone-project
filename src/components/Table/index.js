@@ -67,7 +67,7 @@ export default function DataTable() {
 					))}
 				</tbody>
 			</StyledTableContainer>
-			<RunDataForm onAddRunningData={addRunningData} />
+			<RunDataForm onAddRunData={addRunningData} />
 		</>
 	);
 }
