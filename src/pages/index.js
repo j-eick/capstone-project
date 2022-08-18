@@ -7,7 +7,7 @@ export default function HomePage() {
 	return (
 		<Layout>
 			<Head>
-				<title key="title">My Project</title>
+				<title key="title">Capstone Project</title>
 				<meta key="description" name="description" content="This is my project" />
 			</Head>
 			<DataTable />

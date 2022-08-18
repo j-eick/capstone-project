@@ -16,16 +16,17 @@ const StyledTableContainer = Styled.table`
  border: 2px solid black;
  `;
 
+const StyledTRHead = Styled.tr`
+	background-color: #cce1f5;
+`;
 const StyledTRBody = Styled.tr`
 background-color: #ddebf8;
 `;
-
-const StyledTRHead = Styled.tr`
-	padding: 10px 0;
-	background-color: #cce1f5;
+const StyledColumnTitle = Styled.th`
+padding: 5px 0;
 `;
-
 const StyledEntries = Styled.td`
+	padding: 5px 0;
 	text-align: center;
 `;
 
@@ -47,11 +48,11 @@ export default function DataTable() {
 			<StyledTableContainer>
 				<thead>
 					<StyledTRHead>
-						<th>Distance</th>
-						<th>Time</th>
-						<th>Pace</th>
-						<th>Borg</th>
-						<th>Pain</th>
+						<StyledColumnTitle>Distance</StyledColumnTitle>
+						<StyledColumnTitle>Time</StyledColumnTitle>
+						<StyledColumnTitle>Pace</StyledColumnTitle>
+						<StyledColumnTitle>Borg</StyledColumnTitle>
+						<StyledColumnTitle>Pain</StyledColumnTitle>
 					</StyledTRHead>
 				</thead>
 				<tbody>
