@@ -1,3 +1,4 @@
+import {ErrorMessage} from '@hookform/error-message';
 import {useForm} from 'react-hook-form';
 import styled from 'styled-components';
 
@@ -61,7 +62,7 @@ export default function RunDataForm({onAddRunData}) {
 					type="text"
 					id="time"
 					{...register('time', {
-						required: true,
+						required: 'This is required',
 						maxLength: 8,
 						minLength: 5,
 						pattern: /^(?:(?:([01]?\d|2[0-3]):)?([0-5]?\d):?)([0-5]?\d)$/,
@@ -69,6 +70,7 @@ export default function RunDataForm({onAddRunData}) {
 					name="time"
 					placeholder="format  ➡  hh:mm:ss"
 				/>
+				<ErrorMessage errors={errors} name="time" />
 				<label htmlFor="pace">Enter pace</label>
 				<StyledInput
 					type="text"
@@ -96,11 +98,24 @@ export default function RunDataForm({onAddRunData}) {
 					name="borg"
 					placeholder="1 - 10"
 				/>
+				{/* <select {...register('borg')}>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</select> */}
 				<label htmlFor="pain">Enter pain</label>
 				<StyledInput
 					type="text"
 					id="pain"
 					{...register('pain', {
+						required: true,
 						maxLength: 2,
 						max: 10,
 						min: 0,
@@ -108,6 +123,19 @@ export default function RunDataForm({onAddRunData}) {
 					name="pain"
 					placeholder="0 - 10"
 				/>
+				{/* <select {...register('pain')}>
+					<option value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</select> */}
 				<StyledSubmitButton type="submit">Submit</StyledSubmitButton>
 			</StyledForm>
 		</>
