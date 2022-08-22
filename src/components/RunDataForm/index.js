@@ -59,7 +59,7 @@ export default function RunDataForm({onAddRunData}) {
 						},
 						pattern: {
 							value: /^[0-9]{1,3}\.?[0-9]{1,2}$/,
-							message: '[.] only // 2 decimals',
+							message: 'only DOT || max. 2 decimals',
 						},
 						max: {
 							value: 180,
