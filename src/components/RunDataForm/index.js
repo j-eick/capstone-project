@@ -5,35 +5,29 @@ import styled from 'styled-components';
 /**
  * ##################### STYLING #####################
  */
-
 const StyledForm = styled.form`
 	display: flex;
 	flex-direction: column;
 	width: 50vw;
 	margin: 50px auto;
 `;
-
 const StyledInput = styled.input`
 	margin: 0 0 10px 0;
 	padding: 2px;
 `;
-
 const StyledSubmitButton = styled.button`
 	width: 60%;
 	margin: auto;
 `;
-
 const StyledError = styled.p`
 	margin: -10px 5px 10px 0;
 	color: red;
 	font-weight: 200;
 	text-align: right;
 `;
-
 /**
  * ##################### COMPONENT #####################
  */
-
 export default function RunDataForm({onAddRunData}) {
 	const {
 		register,
@@ -46,11 +40,10 @@ export default function RunDataForm({onAddRunData}) {
 		onAddRunData(event);
 		reset();
 	}
-
 	return (
 		<>
 			<StyledForm onSubmit={handleSubmit(onSubmit)}>
-				{/* >>>>>>>> DISTANCE ########################## */}
+				{/* ##########################  DISTANCE  ########################## */}
 				<label htmlFor="distance">Enter distance</label>
 				<StyledInput
 					type="text"
@@ -85,7 +78,7 @@ export default function RunDataForm({onAddRunData}) {
 					name="distance"
 					render={({message}) => <StyledError>{message}</StyledError>}
 				/>
-				{/* >>>>>>>TIME ########################## */}
+				{/* ##########################  TIME  ########################## */}
 				<label htmlFor="time">Enter time</label>
 				<StyledInput
 					type="text"
@@ -104,8 +97,6 @@ export default function RunDataForm({onAddRunData}) {
 							message: 'Min. 4 digits',
 						},
 						pattern: {
-							// value: /^(?:(?:([01]?\d|2[0-3]):)?([0-5]?\d):?)([0-5]?\d)$/,
-							// value: /^(([0-5]?\d):?([0-5]?\d):?)([0-5]?\d)$/,
 							value: /^(?:([0-5]\d):)?(?:([0-5]?\d):)?([0-5]?\d)$/,
 							message: 'Format ➡ hh:mm:ss',
 						},
@@ -118,7 +109,7 @@ export default function RunDataForm({onAddRunData}) {
 					name="time"
 					render={({message}) => <StyledError>{message}</StyledError>}
 				/>
-				{/* >>>>>>>>  PACE ########################## */}
+				{/* ##########################  PACE  ########################## */}
 				<label htmlFor="pace">Enter pace</label>
 				<StyledInput
 					type="text"
@@ -145,7 +136,7 @@ export default function RunDataForm({onAddRunData}) {
 					name="pace"
 					render={({message}) => <StyledError>{message}</StyledError>}
 				/>
-				{/* >>>>>>> BORG ########################## */}
+				{/* ##########################  BORG  ########################## */}
 				<label htmlFor="borg">Enter borg</label>
 				<StyledInput
 					type="text"
@@ -176,7 +167,7 @@ export default function RunDataForm({onAddRunData}) {
 					name="borg"
 					render={({message}) => <StyledError>{message}</StyledError>}
 				/>
-				{/* >>>>>>>> PAIN ############################## */}
+				{/* ##########################  PAIN  ############################## */}
 				<label htmlFor="pain">Enter pain</label>
 				<StyledInput
 					type="text"

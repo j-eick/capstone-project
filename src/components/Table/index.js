@@ -5,35 +5,30 @@ import styled from 'styled-components';
 
 import mockData from '../lib/mock-data.json';
 import RunDataForm from '../RunDataForm';
-
 /**
  * ##################### STYLING #####################
  */
-
 const StyledTableContainer = styled.table`
 	width: 90vw;
 	margin: 50px auto;
 	border: 2px solid black;
 `;
-
 const StyledTRHead = styled.tr`
 	background-color: #cce1f5;
 `;
 const StyledTRBody = styled.tr`
 	background-color: #ddebf8;
 `;
-const StyledColumnTitle = styled.th`
+const StyledTH = styled.th`
 	padding: 5px 0;
 `;
-const StyledEntries = styled.td`
+const StyledTD = styled.td`
 	padding: 5px 0;
 	text-align: center;
 `;
-
 /**
  * ##################### COMPONENT #####################
  */
-
 export default function DataTable() {
 	const [runData, setRunData] = useState(mockData);
 
@@ -48,7 +43,6 @@ export default function DataTable() {
 			console.log(event.distance.toString());
 			// event.distance.replace(',' , '.');
 		}
-
 		setRunData([...runData, {id: nanoid(), ...event}]);
 	}
 
@@ -57,21 +51,21 @@ export default function DataTable() {
 			<StyledTableContainer>
 				<thead>
 					<StyledTRHead>
-						<StyledColumnTitle>Distance</StyledColumnTitle>
-						<StyledColumnTitle>Time</StyledColumnTitle>
-						<StyledColumnTitle>Pace</StyledColumnTitle>
-						<StyledColumnTitle>Borg</StyledColumnTitle>
-						<StyledColumnTitle>Pain</StyledColumnTitle>
+						<StyledTH>Distance</StyledTH>
+						<StyledTH>Time</StyledTH>
+						<StyledTH>Pace</StyledTH>
+						<StyledTH>Borg</StyledTH>
+						<StyledTH>Pain</StyledTH>
 					</StyledTRHead>
 				</thead>
 				<tbody>
 					{runData.map(data => (
 						<StyledTRBody key={data.id}>
-							<StyledEntries>{data.distance}</StyledEntries>
-							<StyledEntries>{data.time}</StyledEntries>
-							<StyledEntries>{data.pace}</StyledEntries>
-							<StyledEntries>{data.borg}</StyledEntries>
-							<StyledEntries>{data.pain}</StyledEntries>
+							<StyledTD>{data.distance}</StyledTD>
+							<StyledTD>{data.time}</StyledTD>
+							<StyledTD>{data.pace}</StyledTD>
+							<StyledTD>{data.borg}</StyledTD>
+							<StyledTD>{data.pain}</StyledTD>
 						</StyledTRBody>
 					))}
 				</tbody>
