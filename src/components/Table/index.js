@@ -38,6 +38,17 @@ export default function DataTable() {
 	const [runData, setRunData] = useState(mockData);
 
 	function addRunningData(event) {
+		console.log('2');
+		console.log('OUTside IF: ' + event.distance + '\n');
+
+		if (event.distance.substring(',')) {
+			console.log('INside IF: ' + event.distance);
+			console.log('This one has a comma!' + '\n');
+
+			console.log(event.distance.toString());
+			// event.distance.replace(',' , '.');
+		}
+
 		setRunData([...runData, {id: nanoid(), ...event}]);
 	}
 

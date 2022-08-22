@@ -15,14 +15,19 @@ const StyledForm = styled.form`
 
 const StyledInput = styled.input`
 	margin: 0 0 10px 0;
-	&::placeholder {
-		color: #c2c2c2;
-	}
+	padding: 2px;
 `;
 
 const StyledSubmitButton = styled.button`
 	width: 60%;
 	margin: auto;
+`;
+
+const StyledError = styled.p`
+	margin: -10px 5px 10px 0;
+	color: red;
+	font-weight: 200;
+	text-align: right;
 `;
 
 /**
@@ -45,97 +50,163 @@ export default function RunDataForm({onAddRunData}) {
 	return (
 		<>
 			<StyledForm onSubmit={handleSubmit(onSubmit)}>
+				{/* >>>>>>>> DISTANCE ########################## */}
 				<label htmlFor="distance">Enter distance</label>
 				<StyledInput
 					type="text"
 					id="distance"
 					{...register('distance', {
-						max: 180,
-						min: 0.1,
+						maxLength: {
+							value: 6,
+							message: 'Max. 6 characters',
+						},
+						minLength: {
+							value: 1,
+							message: 'Min. 1 character',
+						},
+						pattern: {
+							value: /^[0-9]{1,3}\.?[0-9]{1,2}$/,
+							message: '[.] only // 2 decimals',
+						},
+						max: {
+							value: 180,
+							message: 'Max. value: 180',
+						},
+						min: {
+							value: 0.1,
+							massage: 'Min. value: 0,1',
+						},
 					})}
 					name="distance"
-					placeholder="e.g. 7.3"
+					placeholder="max. 180"
 				/>
-				{errors.distance && <p>Hier steht was an der Eingabe nicht stimmt.</p>}
+				<ErrorMessage
+					errors={errors}
+					name="distance"
+					render={({message}) => <StyledError>{message}</StyledError>}
+				/>
+				{/* >>>>>>>TIME ########################## */}
 				<label htmlFor="time">Enter time</label>
 				<StyledInput
 					type="text"
 					id="time"
 					{...register('time', {
-						required: 'This is required',
-						maxLength: 8,
-						minLength: 5,
-						pattern: /^(?:(?:([01]?\d|2[0-3]):)?([0-5]?\d):?)([0-5]?\d)$/,
+						required: {
+							value: true,
+							message: 'Required',
+						},
+						maxLength: {
+							value: 8,
+							message: 'Max. 6 digits',
+						},
+						minLength: {
+							value: 5,
+							message: 'Min. 4 digits',
+						},
+						pattern: {
+							// value: /^(?:(?:([01]?\d|2[0-3]):)?([0-5]?\d):?)([0-5]?\d)$/,
+							// value: /^(([0-5]?\d):?([0-5]?\d):?)([0-5]?\d)$/,
+							value: /^(?:([0-5]\d):)?(?:([0-5]?\d):)?([0-5]?\d)$/,
+							message: 'Format ➡ hh:mm:ss',
+						},
 					})}
 					name="time"
 					placeholder="format  ➡  hh:mm:ss"
 				/>
-				<ErrorMessage errors={errors} name="time" />
+				<ErrorMessage
+					errors={errors}
+					name="time"
+					render={({message}) => <StyledError>{message}</StyledError>}
+				/>
+				{/* >>>>>>>>  PACE ########################## */}
 				<label htmlFor="pace">Enter pace</label>
 				<StyledInput
 					type="text"
 					id="pace"
 					{...register('pace', {
-						maxLength: 5,
-						minLength: 5,
-						pattern: /^(?:([0-5]?\d):)?([0-5]?\d)$/,
+						maxLength: {
+							value: 5,
+							message: 'Max. 4 digits',
+						},
+						minLength: {
+							value: 5,
+							message: 'Min. 4 digits',
+						},
+						pattern: {
+							value: /^(?:([0-5]?\d):)?([0-5]?\d)$/,
+							message: 'Format ➡ mm:ss',
+						},
 					})}
 					name="pace"
 					placeholder="format  ➡  mm:ss"
 				/>
+				<ErrorMessage
+					errors={errors}
+					name="pace"
+					render={({message}) => <StyledError>{message}</StyledError>}
+				/>
+				{/* >>>>>>> BORG ########################## */}
 				<label htmlFor="borg">Enter borg</label>
 				<StyledInput
 					type="text"
 					id="borg"
 					{...register('borg', {
-						maxLength: 2,
-						max: 10,
-						min: 1,
-						validate: {
-							positive: v => parseInt(v) >= 1,
+						maxLength: {
+							value: 2,
+							message: 'Max. 2 decimals',
+						},
+						max: {
+							value: 10,
+							message: 'Max value: 10',
+						},
+						min: {
+							value: 1,
+							message: 'Min value: 1',
+						},
+						pattern: {
+							value: /^[0-9]+$/,
+							message: 'Numbers only',
 						},
 					})}
 					name="borg"
 					placeholder="1 - 10"
 				/>
-				{/* <select {...register('borg')}>
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5</option>
-					<option value="6">6</option>
-					<option value="7">7</option>
-					<option value="8">8</option>
-					<option value="9">9</option>
-					<option value="10">10</option>
-				</select> */}
+				<ErrorMessage
+					errors={errors}
+					name="borg"
+					render={({message}) => <StyledError>{message}</StyledError>}
+				/>
+				{/* >>>>>>>> PAIN ############################## */}
 				<label htmlFor="pain">Enter pain</label>
 				<StyledInput
 					type="text"
 					id="pain"
 					{...register('pain', {
-						required: true,
-						maxLength: 2,
-						max: 10,
-						min: 0,
+						maxLength: {
+							value: 2,
+							message: 'Max. 2 characters',
+						},
+						max: {
+							value: 10,
+							message: 'Max. value: 10',
+						},
+						min: {
+							value: 0,
+							message: 'Min. value: 0',
+						},
+						pattern: {
+							value: /^[0-9]+$/,
+							message: 'Numbers only',
+						},
 					})}
 					name="pain"
 					placeholder="0 - 10"
 				/>
-				{/* <select {...register('pain')}>
-					<option value="0">0</option>
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5</option>
-					<option value="6">6</option>
-					<option value="7">7</option>
-					<option value="8">8</option>
-					<option value="9">9</option>
-					<option value="10">10</option>
-				</select> */}
+				<ErrorMessage
+					errors={errors}
+					name="pain"
+					render={({message}) => <StyledError>{message}</StyledError>}
+				/>
 				<StyledSubmitButton type="submit">Submit</StyledSubmitButton>
 			</StyledForm>
 		</>
