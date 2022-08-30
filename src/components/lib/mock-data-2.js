@@ -7,68 +7,58 @@ console.clear();
 /*******************************
  ********* MOCK DATA ***********
  */
-export const runData = [
+export const runMockData = [
 	{
 		day: '12/08',
-		parameters: {
-			distance: 3.4,
-			time: '15:23',
-			pace: '05:34',
-			borg: 7,
-			pain: 1,
-		},
+		distance: 3.4,
+		time: '15:23',
+		pace: '05:34',
+		borg: 7,
+		pain: 1,
 	},
 	{
 		day: '13/08',
-		parameters: {
-			distance: 5.04,
-			time: '25:09',
-			pace: '05:14',
-			borg: 7,
-			pain: 0,
-		},
+		distance: 5.04,
+		time: '25:09',
+		pace: '05:14',
+		borg: 7,
+		pain: 0,
 	},
 	{
 		day: '14/08',
-		parameters: {
-			distance: 7.91,
-			time: '38:15',
-			pace: '06:15',
-			borg: 8,
-			pain: 2,
-		},
+		distance: 7.91,
+		time: '38:15',
+		pace: '06:15',
+		borg: 8,
+		pain: 2,
 	},
 	{
 		day: '15/08',
-		parameters: {
-			distance: 19.21,
-			time: '01:25:02',
-			pace: '05:15',
-			borg: 7,
-			pain: 3,
-		},
+		distance: 19.21,
+		time: '01:25:02',
+		pace: '05:15',
+		borg: 7,
+		pain: 3,
 	},
 	{
 		day: '16/08',
-		parameters: {
-			distance: 13.59,
-			time: '01:15:22',
-			pace: '06:57',
-			borg: 8,
-			pain: 2,
-		},
+		distance: 13.59,
+		time: '01:15:22',
+		pace: '06:57',
+		borg: 8,
+		pain: 2,
 	},
 ];
 /***********************************
  *********** DATASETS **************
  */
 export const data = {
-	labels: runData.map(run => run.day),
+	labels: runMockData.map(run => run.day),
 	datasets: [
 		{
 			type: 'line',
 			label: 'Distance',
-			data: runData.map(run => run.parameters.distance),
+			data: runMockData.map(run => run.distance),
 			backgroundColor: 'black',
 			borderColor: 'black',
 			borderWidth: 1.5,
@@ -79,7 +69,7 @@ export const data = {
 		{
 			type: 'line',
 			label: 'Time',
-			data: runData.map(run => stringToSec(run.parameters.time)),
+			data: runMockData.map(run => stringToSec(run.time)),
 			backgroundColor: 'blue',
 			borderColor: 'blue',
 			borderWidth: 1.2,
@@ -90,7 +80,7 @@ export const data = {
 		{
 			type: 'line',
 			label: 'Pace',
-			data: runData.map(run => stringToSec(run.parameters.pace)),
+			data: runMockData.map(run => stringToSec(run.pace)),
 			backgroundColor: 'yellow',
 			borderColor: 'yellow',
 			borderWidth: 1.2,
@@ -101,7 +91,7 @@ export const data = {
 		{
 			type: 'line',
 			label: 'Pain',
-			data: runData.map(run => run.parameters.pain),
+			data: runMockData.map(run => run.pain),
 			backgroundColor: 'red',
 			borderColor: 'red',
 			borderWidth: 1,
@@ -112,7 +102,7 @@ export const data = {
 		{
 			type: 'bar',
 			label: 'Borg',
-			data: runData.map(run => run.parameters.borg),
+			data: runMockData.map(run => run.borg),
 			backgroundColor: 'lightblue',
 			tension: 0.4,
 			yAxisID: 'y',
