@@ -13,8 +13,8 @@ import {
 import {Line} from 'react-chartjs-2';
 import styled from 'styled-components';
 
-import {options} from './mock-data-2';
-import {data} from './mock-data-2';
+import {options} from '../lib/mock-data-2';
+import {data} from '../lib/mock-data-2';
 
 ChartJS.register(
 	CategoryScale,

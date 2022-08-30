@@ -2,6 +2,8 @@ import {ErrorMessage} from '@hookform/error-message';
 import {useForm} from 'react-hook-form';
 import styled from 'styled-components';
 
+console.clear();
+
 /**
  * ##################### STYLING #####################
  */

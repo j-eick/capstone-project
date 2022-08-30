@@ -1,10 +1,11 @@
-// import {useState} from 'react';
 import {nanoid} from 'nanoid';
 import {useState} from 'react';
 import styled from 'styled-components';
 
 import mockData from '../lib/mock-data.json';
 import RunDataForm from '../RunDataForm';
+
+console.clear();
 /**
  * ##################### STYLING #####################
  */
@@ -32,7 +33,8 @@ const StyledTD = styled.td`
 export default function DataTable() {
 	const [runData, setRunData] = useState(mockData);
 
-	function addRunningData(event) {
+	function addRunData(event) {
+		console.log(event);
 		setRunData([...runData, {id: nanoid(), ...event}]);
 	}
 
@@ -60,7 +62,7 @@ export default function DataTable() {
 					))}
 				</tbody>
 			</StyledTableContainer>
-			<RunDataForm onAddRunData={addRunningData} />
+			<RunDataForm onAddRunData={addRunData} />
 		</>
 	);
 }

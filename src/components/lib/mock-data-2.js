@@ -2,6 +2,8 @@ import dayjs from 'dayjs';
 import objectSupport from 'dayjs/plugin/objectSupport';
 dayjs.extend(objectSupport);
 
+console.clear();
+
 /*******************************
  ********* MOCK DATA ***********
  */
@@ -180,8 +182,7 @@ export const options = {
 			//     text: 'time',
 			// },
 			ticks: {
-				callback: function (value, index, ticks) {
-					console.log(value, index, ticks);
+				callback: function (value) {
 					return secToStringDayJS(value);
 				},
 				font: {
