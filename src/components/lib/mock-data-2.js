@@ -9,6 +9,7 @@ console.clear();
  */
 export const runMockData = [
 	{
+		id: 1,
 		day: '12/08',
 		distance: 3.4,
 		time: '15:23',
@@ -17,6 +18,7 @@ export const runMockData = [
 		pain: 1,
 	},
 	{
+		id: 2,
 		day: '13/08',
 		distance: 5.04,
 		time: '25:09',
@@ -25,6 +27,7 @@ export const runMockData = [
 		pain: 0,
 	},
 	{
+		id: 3,
 		day: '14/08',
 		distance: 7.91,
 		time: '38:15',
@@ -33,6 +36,7 @@ export const runMockData = [
 		pain: 2,
 	},
 	{
+		id: 4,
 		day: '15/08',
 		distance: 19.21,
 		time: '01:25:02',
@@ -41,6 +45,7 @@ export const runMockData = [
 		pain: 3,
 	},
 	{
+		id: 5,
 		day: '16/08',
 		distance: 13.59,
 		time: '01:15:22',

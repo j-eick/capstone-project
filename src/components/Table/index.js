@@ -10,6 +10,7 @@ console.clear();
  * ##################### STYLING #####################
  */
 const StyledTableContainer = styled.table`
+	display: none;
 	width: 90vw;
 	margin: 50px auto;
 	border: 2px solid black;
@@ -34,7 +35,9 @@ export default function DataTable() {
 	const [runData, setRunData] = useState(runMockData);
 
 	function addRunData(event) {
+		console.log(event.distance);
 		console.log(event);
+		console.log(runData);
 		setRunData([...runData, {id: nanoid(), ...event}]);
 	}
 
