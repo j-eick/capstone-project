@@ -124,9 +124,10 @@ export const options = {
 	maintainAspectRatio: true,
 	stacked: true,
 	plugins: {
+		/******** CHART TABLE ********/
 		// title: {
-		// display: true,
-		// text: "Run - Overview"
+		// 	display: true,
+		// 	text: 'Run - Overview',
 		// },
 		tooltip: {
 			enabled: true,
@@ -160,7 +161,7 @@ export const options = {
 					size: 10,
 				},
 			},
-			/******** TIME LABEL ********/
+			/******** TIME LABEL xAxis ********/
 			//   title: {
 			//     display: true,
 			//     align: 'end',
@@ -172,7 +173,7 @@ export const options = {
 			display: true,
 			position: 'right',
 			min: '00:00',
-			/******** TIME LABEL ********/
+			/******** TIME LABEL yAxis ********/
 			// title: {
 			//     display: true,
 			//     align: 'end',
