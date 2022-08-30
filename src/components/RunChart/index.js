@@ -32,12 +32,6 @@ const StyledChartDiv = styled.div`
 	height: auto;
 	margin: 50px 0 0 0;
 	padding: 5px;
-
-	/* width: 90vw; */
-
-	/* border: 1px solid black; */
-
-	/* border-radius: 10px; */
 	box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px, rgba(0, 0, 0, 0.23) 0 3px 6px;
 `;
 

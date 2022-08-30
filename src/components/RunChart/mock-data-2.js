@@ -2,7 +2,6 @@ import dayjs from 'dayjs';
 import objectSupport from 'dayjs/plugin/objectSupport';
 dayjs.extend(objectSupport);
 
-console.clear();
 /*******************************
  ********* MOCK DATA ***********
  */
@@ -11,8 +10,6 @@ export const runData = [
 		day: '12/08',
 		parameters: {
 			distance: 3.4,
-			// time: 120,
-			// time: "17:23",
 			time: '15:23',
 			pace: '05:34',
 			borg: 7,
@@ -23,8 +20,6 @@ export const runData = [
 		day: '13/08',
 		parameters: {
 			distance: 5.04,
-			// time: 100,
-			// time: "20:09",
 			time: '25:09',
 			pace: '05:14',
 			borg: 7,
@@ -35,7 +30,6 @@ export const runData = [
 		day: '14/08',
 		parameters: {
 			distance: 7.91,
-			// time: 90,
 			time: '38:15',
 			pace: '06:15',
 			borg: 8,
@@ -46,7 +40,6 @@ export const runData = [
 		day: '15/08',
 		parameters: {
 			distance: 19.21,
-			// time: 80,
 			time: '01:25:02',
 			pace: '05:15',
 			borg: 7,
@@ -57,7 +50,6 @@ export const runData = [
 		day: '16/08',
 		parameters: {
 			distance: 13.59,
-			// time: 70,
 			time: '01:15:22',
 			pace: '06:57',
 			borg: 8,
@@ -141,8 +133,8 @@ export const options = {
 		},
 		legend: {
 			labels: {
-				boxWidth: 5,
-				boxHeight: 10,
+				boxWidth: 7,
+				boxHeight: 7,
 				usePointStyle: true,
 				pointStyle: 'rectRounded',
 				font: {
