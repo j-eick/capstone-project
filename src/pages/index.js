@@ -1,6 +1,8 @@
+// import dynamic from 'next/dynamic';
 import Head from 'next/head';
 
 import Layout from '../components/Layout';
+import LineChart from '../components/RunChart';
 import DataTable from '../components/Table';
 
 export default function HomePage() {
@@ -11,6 +13,7 @@ export default function HomePage() {
 				<meta key="description" name="description" content="This is my project" />
 			</Head>
 			<DataTable />
+			<LineChart />
 		</Layout>
 	);
 }

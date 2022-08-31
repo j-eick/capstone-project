@@ -1,10 +1,8 @@
-// import {useState} from 'react';
-import {nanoid} from 'nanoid';
-import {useState} from 'react';
 import styled from 'styled-components';
 
-import mockData from '../lib/mock-data.json';
-import RunDataForm from '../RunDataForm';
+import useStore from '../../hooks/useStore';
+import RunForm from '../RunForm';
+
 /**
  * ##################### STYLING #####################
  */
@@ -30,21 +28,7 @@ const StyledTD = styled.td`
  * ##################### COMPONENT #####################
  */
 export default function DataTable() {
-	const [runData, setRunData] = useState(mockData);
-
-	function addRunningData(event) {
-		console.log('2');
-		console.log('OUTside IF: ' + event.distance + '\n');
-
-		if (event.distance.substring(',')) {
-			console.log('INside IF: ' + event.distance);
-			console.log('This one has a comma!' + '\n');
-
-			console.log(event.distance.toString());
-			// event.distance.replace(',' , '.');
-		}
-		setRunData([...runData, {id: nanoid(), ...event}]);
-	}
+	const runData = useStore(state => state.runData);
 
 	return (
 		<>
@@ -70,7 +54,7 @@ export default function DataTable() {
 					))}
 				</tbody>
 			</StyledTableContainer>
-			<RunDataForm onAddRunData={addRunningData} />
+			<RunForm />
 		</>
 	);
 }
