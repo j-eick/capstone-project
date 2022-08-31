@@ -1,8 +1,9 @@
 import {ErrorMessage} from '@hookform/error-message';
+import {nanoid} from 'nanoid';
 import {useForm} from 'react-hook-form';
 import styled from 'styled-components';
 
-console.clear();
+import useStore from '../../hooks/useStore';
 
 /**
  * ##################### STYLING #####################
@@ -30,7 +31,10 @@ const StyledError = styled.p`
 /**
  * ##################### COMPONENT #####################
  */
-export default function RunDataForm({onAddRunData}) {
+export default function RunDataForm() {
+	const addRunData = useStore(state => state.addRunData);
+
+	// React Use Form
 	const {
 		register,
 		handleSubmit,
@@ -38,10 +42,28 @@ export default function RunDataForm({onAddRunData}) {
 		reset,
 	} = useForm();
 
-	function onSubmit(event) {
-		onAddRunData(event);
+	function correctDate() {
+		const runDate = new Date().toLocaleString();
+		const dateArray = runDate.split(',');
+		const noYear = dateArray[0].slice(0, 5);
+		return noYear;
+	}
+
+	// Structuring FormData + Submit
+	function onSubmit(data) {
+		let structure = {
+			id: nanoid(),
+			day: correctDate(),
+			distance: data.distance,
+			time: data.time,
+			pace: data.pace,
+			borg: data.borg,
+			pain: data.pace,
+		};
+		addRunData(structure);
 		reset();
 	}
+
 	return (
 		<>
 			<StyledForm onSubmit={handleSubmit(onSubmit)}>
@@ -60,7 +82,9 @@ export default function RunDataForm({onAddRunData}) {
 							message: 'Min. 1 character',
 						},
 						pattern: {
-							value: /^[0-9]{1,3}\.?[0-9]{1,2}$/,
+							// value: /^[0-9]{1,3}\.?[0-9]{1,2}$/,
+							// value: /\d\.?/,
+							value: /^[0-9]{1,3}([.][0-9]{1,2})?$/,
 							message: 'only DOT || max. 2 decimals',
 						},
 						max: {

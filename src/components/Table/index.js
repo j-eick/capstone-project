@@ -1,16 +1,13 @@
-import {nanoid} from 'nanoid';
-import {useState} from 'react';
 import styled from 'styled-components';
 
-import {runMockData} from '../lib/mock-data-2';
-import RunDataForm from '../RunDataForm';
+import useStore from '../../hooks/useStore';
+import RunForm from '../RunForm';
 
 console.clear();
 /**
  * ##################### STYLING #####################
  */
 const StyledTableContainer = styled.table`
-	display: none;
 	width: 90vw;
 	margin: 50px auto;
 	border: 2px solid black;
@@ -32,14 +29,7 @@ const StyledTD = styled.td`
  * ##################### COMPONENT #####################
  */
 export default function DataTable() {
-	const [runData, setRunData] = useState(runMockData);
-
-	function addRunData(event) {
-		console.log(event.distance);
-		console.log(event);
-		console.log(runData);
-		setRunData([...runData, {id: nanoid(), ...event}]);
-	}
+	const runData = useStore(state => state.runData);
 
 	return (
 		<>
@@ -54,7 +44,7 @@ export default function DataTable() {
 					</StyledTRHead>
 				</thead>
 				<tbody>
-					{runMockData.map(data => (
+					{runData.map(data => (
 						<StyledTRBody key={data.id}>
 							<StyledTD>{data.distance}</StyledTD>
 							<StyledTD>{data.time}</StyledTD>
@@ -65,7 +55,7 @@ export default function DataTable() {
 					))}
 				</tbody>
 			</StyledTableContainer>
-			<RunDataForm onAddRunData={addRunData} />
+			<RunForm />
 		</>
 	);
 }
