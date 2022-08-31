@@ -39,6 +39,8 @@ const StyledChartDiv = styled.div`
 	box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px, rgba(0, 0, 0, 0.23) 0 3px 6px;
 `;
 
+// ################# COMPONENT #################
+
 export default function LineChart() {
 	const runData = useStore(state => state.runData);
 
@@ -114,9 +116,7 @@ export default function LineChart() {
 			},
 		],
 	};
-	/************************************
-	 ********** CHART SETTINGS **********
-	 */
+	//################## CHART SETTINGS #################
 	const options = {
 		maintainAspectRatio: true,
 		stacked: true,
