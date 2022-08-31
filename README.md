@@ -12,6 +12,7 @@ This is a template for [Next.js](https://nextjs.org/) with additional tools.
 -   [Getting started](#getting-started)
 -   [Test Driven Development](#test-driven-development)
 -   [Commands](#commands)
+-   Something
 
 <!-- tocstop -->
 
