@@ -58,7 +58,7 @@ export default function RunDataForm() {
 			time: data.time,
 			pace: data.pace,
 			borg: data.borg,
-			pain: data.pace,
+			pain: data.pain,
 		};
 		addRunData(structure);
 		reset();
@@ -82,8 +82,6 @@ export default function RunDataForm() {
 							message: 'Min. 1 character',
 						},
 						pattern: {
-							// value: /^[0-9]{1,3}\.?[0-9]{1,2}$/,
-							// value: /\d\.?/,
 							value: /^[0-9]{1,3}([.][0-9]{1,2})?$/,
 							message: 'only DOT || max. 2 decimals',
 						},

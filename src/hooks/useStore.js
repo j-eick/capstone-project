@@ -42,7 +42,7 @@ const useStore = create(set => {
 		],
 		addRunData: name => {
 			set(state => {
-				return {runData: [name, ...state.runData]};
+				return {runData: [...state.runData, name]};
 			});
 		},
 	};

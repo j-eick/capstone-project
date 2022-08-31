@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import useStore from '../../hooks/useStore';
 import RunForm from '../RunForm';
 
-console.clear();
 /**
  * ##################### STYLING #####################
  */
