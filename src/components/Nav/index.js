@@ -20,7 +20,6 @@ const StyledLi = styled.li`
 `;
 
 export default function Nav() {
-	// const router = useRouter();
 	return (
 		<>
 			<StyledNav>
