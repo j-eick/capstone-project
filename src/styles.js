@@ -7,6 +7,10 @@ export const GlobalStyle = createGlobalStyle`
 		box-sizing: border-box;
 	}
 
+	:root {
+		--fontsize_title: 2.5rem;
+	}
+
 	html {
 		font-size: 16px;
 	}
@@ -16,7 +20,6 @@ export const GlobalStyle = createGlobalStyle`
 		flex-direction: column;
 		margin: 0;
 		padding: 0;
-		font-size: 1rem;
 	}
 
 	a {

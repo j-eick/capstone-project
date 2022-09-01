@@ -34,7 +34,7 @@ ChartJS.register(
 
 const StyledChartDiv = styled.div`
 	height: auto;
-	margin: 50px 0 0 0;
+	margin: 70px 0 0 0;
 	padding: 5px;
 	box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px, rgba(0, 0, 0, 0.23) 0 3px 6px;
 `;
