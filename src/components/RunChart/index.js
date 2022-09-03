@@ -63,14 +63,6 @@ export default function LineChart() {
 		return dayjs({seconds: sec}).format('HH:mm:ss');
 	}
 
-	function maxSevenDays(runData) {
-		const lastSevenDays = runData.slice(-7);
-		const newArray = lastSevenDays.map(day => day.day);
-		return newArray;
-	}
-
-	console.log(maxSevenDays(runData));
-
 	const data = {
 		labels: runData.map(run => run.day).slice(-7),
 		datasets: [
