@@ -19,6 +19,8 @@ import styled from 'styled-components';
 import useStore from '../../hooks/useStore';
 dayjs.extend(objectSupport);
 
+console.clear();
+
 ChartJS.register(
 	CategoryScale,
 	BarController,
@@ -31,6 +33,8 @@ ChartJS.register(
 	Tooltip,
 	Legend
 );
+
+// ################# STYLING #################
 
 const StyledChartDiv = styled.div`
 	height: auto;
@@ -59,13 +63,21 @@ export default function LineChart() {
 		return dayjs({seconds: sec}).format('HH:mm:ss');
 	}
 
+	function maxSevenDays(runData) {
+		const lastSevenDays = runData.slice(-7);
+		const newArray = lastSevenDays.map(day => day.day);
+		return newArray;
+	}
+
+	console.log(maxSevenDays(runData));
+
 	const data = {
-		labels: runData.map(run => run.day),
+		labels: runData.map(run => run.day).slice(-7),
 		datasets: [
 			{
 				type: 'line',
 				label: 'Distance',
-				data: runData.map(run => run.distance),
+				data: runData.map(run => run.distance).slice(-7),
 				backgroundColor: 'black',
 				borderColor: 'black',
 				borderWidth: 1.5,
@@ -76,7 +88,7 @@ export default function LineChart() {
 			{
 				type: 'line',
 				label: 'Time',
-				data: runData.map(run => stringToSec(run.time)),
+				data: runData.map(run => stringToSec(run.time)).slice(-7),
 				backgroundColor: 'blue',
 				borderColor: 'blue',
 				borderWidth: 1.2,
@@ -87,7 +99,7 @@ export default function LineChart() {
 			{
 				type: 'line',
 				label: 'Pace',
-				data: runData.map(run => stringToSec(run.pace)),
+				data: runData.map(run => stringToSec(run.pace)).slice(-7),
 				backgroundColor: 'yellow',
 				borderColor: 'yellow',
 				borderWidth: 1.2,
@@ -98,7 +110,7 @@ export default function LineChart() {
 			{
 				type: 'line',
 				label: 'Pain',
-				data: runData.map(run => run.pain),
+				data: runData.map(run => run.pain).slice(-7),
 				backgroundColor: 'red',
 				borderColor: 'red',
 				borderWidth: 1,
@@ -109,7 +121,7 @@ export default function LineChart() {
 			{
 				type: 'bar',
 				label: 'Borg',
-				data: runData.map(run => run.borg),
+				data: runData.map(run => run.borg).slice(-7),
 				backgroundColor: 'lightblue',
 				tension: 0.4,
 				yAxisID: 'y',
