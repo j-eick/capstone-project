@@ -19,8 +19,6 @@ import styled from 'styled-components';
 import useStore from '../../hooks/useStore';
 dayjs.extend(objectSupport);
 
-console.clear();
-
 ChartJS.register(
 	CategoryScale,
 	BarController,
