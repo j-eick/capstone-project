@@ -67,16 +67,18 @@ const useStore = create(set => {
 				pain: 1,
 			},
 		],
+		formShows: false,
 		addRunData: formSubmit => {
 			set(state => {
 				return {runData: [...state.runData, formSubmit]};
 			});
 		},
-		// setFormShows: () => {
-		// 	formShows: false,
-		// 	const shows = get(formShows);
-		// 	// set({shows: true});
-		// },
+		toggleFormShows: () => {
+			set(state => {
+				!state.formShows;
+				console.log(state.formShows);
+			});
+		},
 	};
 });
 

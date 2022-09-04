@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import MySVG from '../../../public/MySVG';
 import useStore from '../../hooks/useStore';
-import AddRunButton from '../Buttons/Button';
+import Button from '../Buttons/Button';
 
 console.clear();
 
@@ -33,7 +33,6 @@ export default function Nav() {
 
 	function addRun() {
 		console.log(formShows);
-		console.log('Test');
 		// formShows = true
 		// if formShows = true
 		// 		turn Button "+" into "↩︎"
@@ -54,11 +53,9 @@ export default function Nav() {
 					</StyledLi>
 					{/* ******************  ADD RUN  ************** */}
 					<StyledLi>
-						<AddRunButton type="button" onClick={addRun} aria-label="add-runData">
-							<a>
-								<MySVG variant="plus" size="30px" color="black" />
-							</a>
-						</AddRunButton>
+						<Button type="button" onClick={addRun} aria-label="add-runData">
+							<MySVG variant="plus" size="30px" color="black" />
+						</Button>
 					</StyledLi>
 					{/* ******************  PROTOCOL  ************** */}
 					<StyledLi>
