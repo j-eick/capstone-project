@@ -32,17 +32,44 @@ const useStore = create(set => {
 			},
 			{
 				id: 4,
-				day: '14/08',
+				day: '15/08',
 				distance: 4.45,
 				time: '23:30',
 				pace: '05:03',
 				borg: 7,
-				pain: 0,
+				pain: 3,
+			},
+			{
+				id: 5,
+				day: '16/08',
+				distance: 4.45,
+				time: '13:30',
+				pace: '05:03',
+				borg: 7,
+				pain: 2,
+			},
+			{
+				id: 6,
+				day: '17/08',
+				distance: 4.45,
+				time: '17:30',
+				pace: '05:03',
+				borg: 7,
+				pain: 1,
+			},
+			{
+				id: 7,
+				day: '18/08',
+				distance: 4.45,
+				time: '25:30',
+				pace: '05:03',
+				borg: 7,
+				pain: 1,
 			},
 		],
-		addRunData: name => {
+		addRunData: formSubmit => {
 			set(state => {
-				return {runData: [...state.runData, name]};
+				return {runData: [...state.runData, formSubmit]};
 			});
 		},
 	};
