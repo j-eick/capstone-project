@@ -2,7 +2,12 @@ import Link from 'next/link';
 import styled from 'styled-components';
 
 import MySVG from '../../../public/MySVG';
+import useStore from '../../hooks/useStore';
 import AddRunButton from '../Buttons/Button';
+
+console.clear();
+
+// *********************  STYLING  *******************
 
 const StyledNav = styled.nav`
 	position: fixed;
@@ -20,8 +25,21 @@ const StyledLi = styled.li`
 	list-style: none;
 `;
 
+/*******************************************************
+ * *********************  COMPONENT  *******************
+ */
 export default function Nav() {
-	function clickPlusHandler() {}
+	const formShows = useStore(state => state.formShows);
+
+	function addRun() {
+		console.log(formShows);
+		console.log('Test');
+		// formShows = true
+		// if formShows = true
+		// 		turn Button "+" into "↩︎"
+		// form shows up with form inside
+	}
+
 	return (
 		<>
 			<StyledNav>
@@ -36,11 +54,7 @@ export default function Nav() {
 					</StyledLi>
 					{/* ******************  ADD RUN  ************** */}
 					<StyledLi>
-						<AddRunButton
-							type="button"
-							onClick={clickPlusHandler}
-							aria-label="add-runData"
-						>
+						<AddRunButton type="button" onClick={addRun} aria-label="add-runData">
 							<a>
 								<MySVG variant="plus" size="30px" color="black" />
 							</a>

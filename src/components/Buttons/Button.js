@@ -1,12 +1,7 @@
 const Button = ({children}) => {
-	function handleClick() {
-		// code
-	}
 	return (
 		<>
-			<button type="button" onClick={handleClick}>
-				{children}
-			</button>
+			<button type="button">{children}</button>
 		</>
 	);
 };

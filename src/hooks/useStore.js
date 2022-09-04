@@ -72,6 +72,11 @@ const useStore = create(set => {
 				return {runData: [...state.runData, formSubmit]};
 			});
 		},
+		// setFormShows: () => {
+		// 	formShows: false,
+		// 	const shows = get(formShows);
+		// 	// set({shows: true});
+		// },
 	};
 });
 
