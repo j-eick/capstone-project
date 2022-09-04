@@ -2,6 +2,7 @@ import Link from 'next/link';
 import styled from 'styled-components';
 
 import MySVG from '../../../public/MySVG';
+import AddRunButton from '../Buttons/Button';
 
 const StyledNav = styled.nav`
 	position: fixed;
@@ -20,10 +21,12 @@ const StyledLi = styled.li`
 `;
 
 export default function Nav() {
+	function clickPlusHandler() {}
 	return (
 		<>
 			<StyledNav>
 				<StyledUl>
+					{/* ******************  HOME  ************** */}
 					<StyledLi>
 						<Link href="/" aria-label="Home">
 							<a>
@@ -31,13 +34,19 @@ export default function Nav() {
 							</a>
 						</Link>
 					</StyledLi>
+					{/* ******************  ADD RUN  ************** */}
 					<StyledLi>
-						<Link href="/run-protocol" aria-label="add-runData">
+						<AddRunButton
+							type="button"
+							onClick={clickPlusHandler}
+							aria-label="add-runData"
+						>
 							<a>
 								<MySVG variant="plus" size="30px" color="black" />
 							</a>
-						</Link>
+						</AddRunButton>
 					</StyledLi>
+					{/* ******************  PROTOCOL  ************** */}
 					<StyledLi>
 						<Link href="/run-protocol" aria-label="Run-Protocol">
 							<a>
