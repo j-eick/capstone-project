@@ -27,14 +27,21 @@ export default function Nav() {
 					<StyledLi>
 						<Link href="/" aria-label="Home">
 							<a>
-								<MySVG variant="home" size="24px" color="black" />
+								<MySVG variant="home" size="30px" color="black" />
+							</a>
+						</Link>
+					</StyledLi>
+					<StyledLi>
+						<Link href="/run-protocol" aria-label="add-runData">
+							<a>
+								<MySVG variant="plus" size="30px" color="black" />
 							</a>
 						</Link>
 					</StyledLi>
 					<StyledLi>
 						<Link href="/run-protocol" aria-label="Run-Protocol">
 							<a>
-								<MySVG variant="list" size="24px" color="black" />
+								<MySVG variant="list" size="30px" color="black" />
 							</a>
 						</Link>
 					</StyledLi>
