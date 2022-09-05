@@ -104,7 +104,7 @@ export default function LineChart() {
 				backgroundColor: 'red',
 				borderColor: 'red',
 				borderWidth: 1,
-				pointRadius: 2.3,
+				pointRadius: 0,
 				tension: 0.4,
 				yAxisID: 'y',
 			},

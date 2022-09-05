@@ -13,7 +13,6 @@ const StyledNav = styled.nav`
 	display: flex;
 	position: fixed;
 	bottom: 0;
-	align-items: center;
 	width: 100%;
 	height: 7%;
 	background-color: #e5f0fa;
@@ -80,7 +79,7 @@ export default function Nav() {
 							aria-label="add-runData"
 						>
 							{!formShows ? (
-								<MySVG variant="plusSquare" size="25px" color="black" />
+								<MySVG variant="plusSquareEmpty" size="25px" color="black" />
 							) : (
 								<MySVG variant="stop" size="25px" color="black" />
 							)}
