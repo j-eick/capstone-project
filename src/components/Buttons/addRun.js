@@ -1,5 +1,5 @@
-// import styled from 'styled-components';
+import styled from 'styled-components';
 
-// export const StyledRunButton = styled.button`
-// 	//code
-// `;
+export const StyledRunButton = styled.button`
+	//code
+`;

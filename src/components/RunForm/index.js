@@ -12,7 +12,7 @@ const StyledForm = styled.form`
 	display: flex;
 	flex-direction: column;
 	width: 50vw;
-	margin: 50px auto;
+	margin: 20px auto;
 `;
 const StyledInput = styled.input`
 	margin: 0 0 10px 0;
