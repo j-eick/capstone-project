@@ -3,8 +3,6 @@ import styled from 'styled-components';
 
 import MySVG from '../../../public/MySVG';
 
-console.clear();
-
 // *********************  STYLING  *******************
 
 const StyledNav = styled.nav`
