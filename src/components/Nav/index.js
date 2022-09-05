@@ -32,7 +32,7 @@ const StyledLi = styled.li`
 const StyledCollapsibleDiv = styled.div`
 	position: absolute;
 	z-index: 50;
-	top: -1148%;
+	top: -2440%;
 	width: 70vw;
 	height: 51vh;
 	transform: translateX(-43%);
@@ -48,8 +48,6 @@ const StyledButton = styled.button`
  * *********************  COMPONENT  *******************
  */
 export default function Nav() {
-	// const formShows = useStore(state => state.formShows);
-	// const toggleFormShows = useStore(state => state.toggleFormShows);
 	const [formShows, setFormShows] = useState(false);
 
 	return (
