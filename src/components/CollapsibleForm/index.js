@@ -1,8 +1,11 @@
 import {useState} from 'react';
 import styled from 'styled-components';
 
+import RunForm from '../RunForm';
+
 const StyledRunbutton = styled.button`
 	display: flex;
+	z-index: 40;
 	margin: 0 auto;
 	padding: 10px 15px;
 	border: none;
@@ -24,6 +27,7 @@ export default function CollapsibleForm() {
 			>
 				{!formShows ? 'Add Run' : ''}
 			</StyledRunbutton>
+			{formShows && <RunForm />}
 		</>
 	);
 }
