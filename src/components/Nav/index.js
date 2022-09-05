@@ -1,9 +1,7 @@
 import Link from 'next/link';
-import {useState} from 'react';
 import styled from 'styled-components';
 
 import MySVG from '../../../public/MySVG';
-import RunForm from '../RunForm';
 
 console.clear();
 
@@ -29,27 +27,11 @@ const StyledUl = styled.ul`
 const StyledLi = styled.li`
 	list-style: none;
 `;
-const StyledCollapsibleDiv = styled.div`
-	position: absolute;
-	z-index: 50;
-	top: -2440%;
-	width: 70vw;
-	height: 51vh;
-	transform: translateX(-43%);
-	border-radius: 30px 30px 0 0;
-	background-color: #e5f0fa;
-`;
-const StyledButton = styled.button`
-	border: none;
-	background: none;
-`;
 
 /*******************************************************
  * *********************  COMPONENT  *******************
  */
 export default function Nav() {
-	const [formShows, setFormShows] = useState(false);
-
 	return (
 		<>
 			<StyledNav>
@@ -61,27 +43,6 @@ export default function Nav() {
 								<MySVG variant="home" size="25px" color="black" />
 							</a>
 						</Link>
-					</StyledLi>
-					{/* ******************  ADD RUN  ************** */}
-					<StyledLi>
-						{formShows && (
-							<StyledCollapsibleDiv>
-								<RunForm />
-							</StyledCollapsibleDiv>
-						)}
-						<StyledButton
-							type="button"
-							onClick={() => {
-								setFormShows(!formShows);
-							}}
-							aria-label="add-runData"
-						>
-							{!formShows ? (
-								<MySVG variant="plusSquareEmpty" size="25px" color="black" />
-							) : (
-								<MySVG variant="stop" size="25px" color="black" />
-							)}
-						</StyledButton>
 					</StyledLi>
 					{/* ******************  PROTOCOL  ************** */}
 					<StyledLi>
