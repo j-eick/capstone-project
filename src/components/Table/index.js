@@ -39,8 +39,8 @@ export default function DataTable() {
 					</StyledTRHead>
 				</thead>
 				<tbody>
-					{runData.map(data => (
-						<CollapsibleRow key={data.id} />
+					{runData.map(entry => (
+						<CollapsibleRow key={entry.id} cellData={entry} />
 					))}
 				</tbody>
 			</StyledTableContainer>

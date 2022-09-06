@@ -1,18 +1,16 @@
 // import {useState} from 'react';
 import styled from 'styled-components';
 
-import useStore from '../../hooks/useStore';
-
 /**
  * ************ STYLES ******************
  */
 const StyledTRBody = styled.tr`
 	background-color: #ddebf8;
 `;
-const StyledTD = styled.td`
-	padding: 5px 0;
-	text-align: center;
-`;
+// const StyledTD = styled.td`
+// 	padding: 5px 0;
+// 	text-align: center;
+// `;
 
 console.clear();
 /**
@@ -20,7 +18,6 @@ console.clear();
  */
 export default function CollapsibleRow() {
 	// const [optionalRow, setOptionalRow] = useState(true);
-	const runData = useStore(state => state.runData);
 
 	return (
 		<>
@@ -29,11 +26,11 @@ export default function CollapsibleRow() {
 			// 	setOptionalRow(!optionalRow);
 			// }}
 			>
-				<StyledTD>{runData}</StyledTD>
-				<StyledTD>{runData.time}</StyledTD>
-				<StyledTD>{runData.pace}</StyledTD>
-				<StyledTD>{runData.borg}</StyledTD>
-				<StyledTD>{runData.pain}</StyledTD>
+				{/* <StyledTD></StyledTD>
+				<StyledTD></StyledTD>
+				<StyledTD></StyledTD>
+				<StyledTD></StyledTD>
+				<StyledTD></StyledTD> */}
 			</StyledTRBody>
 			{/* {!optionalRow && (
 				<StyledTRBody>
