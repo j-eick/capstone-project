@@ -46,7 +46,6 @@ export default function CollapsibleForm() {
 				type="button"
 				onClick={() => {
 					setFormShows(!formShows);
-					console.log('test');
 				}}
 				aria-label="add-runData"
 			>
