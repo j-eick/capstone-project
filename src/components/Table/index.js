@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 import useStore from '../../hooks/useStore';
 
+console.clear();
+
 /**
  * ##################### STYLING #####################
  */
@@ -29,6 +31,10 @@ const StyledTD = styled.td`
 export default function DataTable() {
 	const runData = useStore(state => state.runData);
 
+	function modifyRow() {
+		console.log('test');
+	}
+
 	return (
 		<>
 			<StyledTableContainer>
@@ -43,7 +49,7 @@ export default function DataTable() {
 				</thead>
 				<tbody>
 					{runData.map(data => (
-						<StyledTRBody key={data.id}>
+						<StyledTRBody key={data.id} onClick={modifyRow}>
 							<StyledTD>{data.distance}</StyledTD>
 							<StyledTD>{data.time}</StyledTD>
 							<StyledTD>{data.pace}</StyledTD>

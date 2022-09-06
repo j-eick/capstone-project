@@ -72,6 +72,13 @@ const useStore = create(set => {
 				return {runData: [...state.runData, formSubmit]};
 			});
 		},
+		deleteEntry(id) {
+			set(state => {
+				return {
+					runData: state.runData.filter(entry => id !== entry.id),
+				};
+			});
+		},
 	};
 });
 
