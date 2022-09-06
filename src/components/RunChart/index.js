@@ -11,13 +11,13 @@ import {
 	Tooltip,
 	Legend,
 } from 'chart.js';
-import dayjs from 'dayjs';
-import objectSupport from 'dayjs/plugin/objectSupport';
 import {Line} from 'react-chartjs-2';
 import styled from 'styled-components';
 
 import useStore from '../../hooks/useStore';
-dayjs.extend(objectSupport);
+import CollapsibleForm from '../CollapsibleForm';
+
+import options from './options.js';
 
 ChartJS.register(
 	CategoryScale,
@@ -36,9 +36,9 @@ ChartJS.register(
 
 const StyledChartDiv = styled.div`
 	height: auto;
-	margin: 70px 0 0 0;
+	margin: 50px 0 0 0;
 	padding: 5px;
-	box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px, rgba(0, 0, 0, 0.23) 0 3px 6px;
+	box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px, rgba(0, 0, 0, 0.15) 0 3px 6px;
 `;
 
 // ################# COMPONENT #################
@@ -55,10 +55,6 @@ export default function LineChart() {
 		const [hours, minutes, seconds] = numOnly;
 		const result = +hours * 60 * 60 + +minutes * 60 + +seconds;
 		return result;
-	}
-	// Seconds --> String
-	function secToStringDayJS(sec) {
-		return dayjs({seconds: sec}).format('HH:mm:ss');
 	}
 
 	const data = {
@@ -104,7 +100,7 @@ export default function LineChart() {
 				backgroundColor: 'red',
 				borderColor: 'red',
 				borderWidth: 1,
-				pointRadius: 2.3,
+				pointRadius: 0,
 				tension: 0.4,
 				yAxisID: 'y',
 			},
@@ -118,67 +114,13 @@ export default function LineChart() {
 			},
 		],
 	};
-	//################## CHART SETTINGS #################
-	const options = {
-		maintainAspectRatio: true,
-		stacked: true,
-		plugins: {
-			tooltip: {
-				enabled: true,
-			},
-			legend: {
-				labels: {
-					boxWidth: 7,
-					boxHeight: 7,
-					usePointStyle: true,
-					pointStyle: 'rectRounded',
-					font: {
-						size: 10,
-					},
-				},
-			},
-		},
-		scales: {
-			x: {
-				ticks: {
-					font: {
-						size: 10,
-					},
-				},
-			},
-			y: {
-				type: 'linear',
-				display: true,
-				position: 'left',
-				ticks: {
-					font: {
-						size: 10,
-					},
-				},
-			},
-			y1: {
-				type: 'linear',
-				display: true,
-				position: 'right',
-				min: '00:00',
-				ticks: {
-					callback: function (value) {
-						return secToStringDayJS(value);
-					},
-					font: {
-						size: 10,
-					},
-				},
-				grid: {
-					drawOnChartArea: false,
-				},
-			},
-		},
-	};
 
 	return (
-		<StyledChartDiv>
-			<Line data={data} options={options} />
-		</StyledChartDiv>
+		<div>
+			<StyledChartDiv>
+				<Line data={data} options={options} />
+			</StyledChartDiv>
+			<CollapsibleForm />
+		</div>
 	);
 }

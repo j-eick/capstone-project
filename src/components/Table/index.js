@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 import useStore from '../../hooks/useStore';
-import RunForm from '../RunForm';
 
 /**
  * ##################### STYLING #####################
@@ -54,7 +53,6 @@ export default function DataTable() {
 					))}
 				</tbody>
 			</StyledTableContainer>
-			<RunForm />
 		</>
 	);
 }

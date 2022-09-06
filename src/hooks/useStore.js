@@ -67,7 +67,7 @@ const useStore = create(set => {
 				pain: 1,
 			},
 		],
-		addRunData: formSubmit => {
+		addRunData(formSubmit) {
 			set(state => {
 				return {runData: [...state.runData, formSubmit]};
 			});

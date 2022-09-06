@@ -11,9 +11,13 @@ import useStore from '../../hooks/useStore';
 const StyledForm = styled.form`
 	display: flex;
 	flex-direction: column;
-	width: 50vw;
-	margin: 50px auto;
+	width: 60vw;
+	margin: -5px auto 0;
+	padding: 40px 20px 20px;
+	border-radius: 0 0 30px 30px;
+	box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px, 0 1px 3px 0 darkgray inset;
 `;
+
 const StyledInput = styled.input`
 	margin: 0 0 10px 0;
 	padding: 2px;
@@ -21,6 +25,10 @@ const StyledInput = styled.input`
 const StyledSubmitButton = styled.button`
 	width: 60%;
 	margin: auto;
+	padding: 5px 0;
+	border: none;
+	border-radius: 20px;
+	box-shadow: rgb(60 64 67 / 30%) 0 1px 3px 0;
 `;
 const StyledError = styled.p`
 	margin: -10px 5px 10px 0;
@@ -222,7 +230,7 @@ export default function RunDataForm() {
 					name="pain"
 					render={({message}) => <StyledError>{message}</StyledError>}
 				/>
-				<StyledSubmitButton type="submit">Submit</StyledSubmitButton>
+				<StyledSubmitButton type="submit">Enter</StyledSubmitButton>
 			</StyledForm>
 		</>
 	);
