@@ -1,5 +1,7 @@
-// import {useState} from 'react';
-import styled from 'styled-components';
+import {useState} from 'react';
+import styled, {css} from 'styled-components';
+
+import useStore from '../../hooks/useStore';
 
 /**
  * ************ STYLES ******************
@@ -7,39 +9,65 @@ import styled from 'styled-components';
 const StyledTRBody = styled.tr`
 	background-color: #ddebf8;
 `;
-// const StyledTD = styled.td`
-// 	padding: 5px 0;
-// 	text-align: center;
-// `;
+const StyledTD = styled.td`
+	padding: 5px 0;
+	text-align: center;
+`;
+const StyledDiv = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 28.5px;
+	padding: 2px 10px;
+	text-align: center;
+`;
+const StyledButton = styled.button`
+	position: absolute;
+	${({variant}) =>
+		variant === 'delete' &&
+		css`
+			right: 10%;
+		`}
+	${({variant}) =>
+		variant === 'edit' &&
+		css`
+			right: 25.5%;
+		`}
+`;
 
 console.clear();
 /**
  * ************ COMPONENT ******************
  */
-export default function CollapsibleRow() {
-	// const [optionalRow, setOptionalRow] = useState(true);
+export default function CollapsibleRow({cellData}) {
+	const [optionalRow, setOptionalRow] = useState(true);
+	const deleteEntry = useStore(state => state.deleteEntry);
+	const editEntry = useStore(state => state.deleteEntry);
 
 	return (
 		<>
 			<StyledTRBody
-			// onClick={() => {
-			// 	setOptionalRow(!optionalRow);
-			// }}
+				onClick={() => {
+					setOptionalRow(!optionalRow);
+				}}
 			>
-				{/* <StyledTD></StyledTD>
-				<StyledTD></StyledTD>
-				<StyledTD></StyledTD>
-				<StyledTD></StyledTD>
-				<StyledTD></StyledTD> */}
+				<StyledTD>{cellData.distance}</StyledTD>
+				<StyledTD>{cellData.time}</StyledTD>
+				<StyledTD>{cellData.pace}</StyledTD>
+				<StyledTD>{cellData.borg}</StyledTD>
+				<StyledTD>{cellData.pain}</StyledTD>
 			</StyledTRBody>
-			{/* {!optionalRow && (
-				<StyledTRBody>
-					<StyledTD>
-						<button>Edit</button>
-						<button>Delete</button>
-					</StyledTD>
-				</StyledTRBody>
-			)} */}
+			{!optionalRow && (
+				<StyledDiv>
+					<StyledButton variant="delete" onClick={() => deleteEntry(cellData.id)}>
+						Delete
+					</StyledButton>
+					<StyledButton variant="edit" onClick={() => editEntry}>
+						Edit
+					</StyledButton>
+				</StyledDiv>
+			)}
 		</>
 	);
 }

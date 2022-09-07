@@ -59,7 +59,6 @@ export default function RunDataForm() {
 
 	// Structuring FormData + Submit
 	function onSubmit(data) {
-		data.preventDefault();
 		let structure = {
 			id: nanoid(),
 			day: correctDate(),
