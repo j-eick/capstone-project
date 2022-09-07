@@ -72,13 +72,9 @@ const useStore = create(set => {
 				return {runData: [...state.runData, formSubmit]};
 			});
 		},
-		// editEntry(id) {
-		// 	set(state => {
-		// 		return {
-		// 			runData: state.runData.filter(entry => id !== entry.id),
-		// 		};
-		// 	});
-		// },
+		/**
+		 *** IMPLEMENTATION FOLLOWS ***
+		 */
 		// editDistance(id, time) {
 		// 	set(state => ({
 		// 		runData: state.runData.map(entry => (entry.id === id ? {...entry, time} : entry)),
