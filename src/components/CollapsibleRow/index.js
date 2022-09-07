@@ -10,7 +10,8 @@ const StyledTRBody = styled.tr`
 	background-color: #ddebf8;
 `;
 const StyledTD = styled.td`
-	padding: 5px 0;
+	padding: 6px 0;
+	font-size: var(--font_size_tableCell);
 	text-align: center;
 `;
 const StyledDiv = styled.div`

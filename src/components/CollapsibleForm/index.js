@@ -24,7 +24,7 @@ const StyledRunbutton = styled.button`
 	}};
 	border: none;
 	border-radius: 0 0 20px 20px;
-	box-shadow: rgba(0, 0, 0, 0.16) 0 2px 5px, 0 2px 5px 0 darkgray inset;
+	box-shadow: rgba(0, 0, 0, 0.16) 0 2px 5px, 0 2px 5px 0 #fff inset;
 `;
 
 const StyledContainerDiv = styled.div`
