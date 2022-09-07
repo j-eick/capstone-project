@@ -3,8 +3,6 @@ import styled from 'styled-components';
 import useStore from '../../hooks/useStore';
 import CollapsibleRow from '../CollapsibleRow';
 
-console.clear();
-
 /**
  * ##################### STYLING #####################
  */

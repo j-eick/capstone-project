@@ -32,7 +32,6 @@ const StyledContainerDiv = styled.div`
 	margin: 0 auto;
 	padding: 5px 0;
 `;
-
 /**
  * ********************* COMPONENT **************************
  */

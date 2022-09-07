@@ -35,8 +35,6 @@ const StyledButton = styled.button`
 			right: 25.5%;
 		`}
 `;
-
-console.clear();
 /**
  * ************ COMPONENT ******************
  */
