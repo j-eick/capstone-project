@@ -11,9 +11,8 @@ const StyledNav = styled.nav`
 	bottom: 0;
 	align-items: center;
 	width: 100%;
-	height: 7%;
+	height: 8%;
 	background-color: #a0c0d6;
-	box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.4);
 `;
 const StyledUl = styled.ul`
 	display: flex;
