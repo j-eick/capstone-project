@@ -79,6 +79,11 @@ const useStore = create(set => {
 		// 		};
 		// 	});
 		// },
+		// editDistance(id, time) {
+		// 	set(state => ({
+		// 		runData: state.runData.map(entry => (entry.id === id ? {...entry, time} : entry)),
+		// 	}));
+		// },
 		deleteEntry(id) {
 			set(state => {
 				return {
