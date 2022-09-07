@@ -22,6 +22,10 @@ export const GlobalStyle = createGlobalStyle`
 		padding: 0;
 	}
 
+	nav {
+		width: 375px;
+	}
+
 	a {
 		text-decoration: none;
 	}

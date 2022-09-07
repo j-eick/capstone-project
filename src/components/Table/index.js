@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import useStore from '../../hooks/useStore';
+import CollapsibleRow from '../CollapsibleRow';
 
 /**
  * ##################### STYLING #####################
@@ -13,16 +14,10 @@ const StyledTableContainer = styled.table`
 const StyledTRHead = styled.tr`
 	background-color: #cce1f5;
 `;
-const StyledTRBody = styled.tr`
-	background-color: #ddebf8;
-`;
 const StyledTH = styled.th`
 	padding: 5px 0;
 `;
-const StyledTD = styled.td`
-	padding: 5px 0;
-	text-align: center;
-`;
+
 /**
  * ##################### COMPONENT #####################
  */
@@ -42,14 +37,8 @@ export default function DataTable() {
 					</StyledTRHead>
 				</thead>
 				<tbody>
-					{runData.map(data => (
-						<StyledTRBody key={data.id}>
-							<StyledTD>{data.distance}</StyledTD>
-							<StyledTD>{data.time}</StyledTD>
-							<StyledTD>{data.pace}</StyledTD>
-							<StyledTD>{data.borg}</StyledTD>
-							<StyledTD>{data.pain}</StyledTD>
-						</StyledTRBody>
+					{runData.map(entry => (
+						<CollapsibleRow key={entry.id} cellData={entry} />
 					))}
 				</tbody>
 			</StyledTableContainer>

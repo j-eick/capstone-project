@@ -1,7 +1,7 @@
 import {ErrorMessage} from '@hookform/error-message';
 import {nanoid} from 'nanoid';
 import {useForm} from 'react-hook-form';
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 
 import useStore from '../../hooks/useStore';
 
@@ -16,6 +16,11 @@ const StyledForm = styled.form`
 	padding: 40px 20px 20px;
 	border-radius: 0 0 30px 30px;
 	box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px, 0 1px 3px 0 darkgray inset;
+	${({variant}) =>
+		variant === 'editRow' &&
+		css`
+			border-radius: 0 0 0 0;
+		`}
 `;
 
 const StyledInput = styled.input`
@@ -28,7 +33,7 @@ const StyledSubmitButton = styled.button`
 	padding: 5px 0;
 	border: none;
 	border-radius: 20px;
-	box-shadow: rgb(60 64 67 / 30%) 0 1px 3px 0;
+	box-shadow: rgb(150 150 150 / 50%) 0 1px 2px 0;
 `;
 const StyledError = styled.p`
 	margin: -10px 5px 10px 0;
