@@ -12,13 +12,13 @@ const StyledTableContainer = styled.table`
 	padding: 10px;
 	overflow: hidden;
 	border-collapse: collapse;
-	border-radius: 20px;
+	border-radius: 25px;
 `;
 const StyledTRHead = styled.tr`
 	background-color: #cce1f5;
 `;
 const StyledTH = styled.th`
-	padding: 10px 0;
+	padding: 15px 0;
 	border-bottom: 1px solid white;
 	font-size: var(--font_size_tableHead);
 `;
