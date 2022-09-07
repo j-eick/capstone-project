@@ -9,13 +9,17 @@ import CollapsibleRow from '../CollapsibleRow';
 const StyledTableContainer = styled.table`
 	width: 90vw;
 	margin: 50px auto;
-	border-collapse: separate;
+	padding: 10px;
+	overflow: hidden;
+	border-collapse: collapse;
+	border-radius: 20px;
 `;
 const StyledTRHead = styled.tr`
 	background-color: #cce1f5;
 `;
 const StyledTH = styled.th`
-	padding: 8px 0;
+	padding: 10px 0;
+	border-bottom: 1px solid white;
 	font-size: var(--font_size_tableHead);
 `;
 
