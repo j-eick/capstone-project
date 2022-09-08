@@ -41,7 +41,7 @@ export default function Nav() {
 					<StyledLi>
 						<Link href="/" aria-label="Home">
 							<a>
-								<MySVG variant="home" size="25px" color="black" />
+								<MySVG variant="home" size="25px" color="#545454" />
 							</a>
 						</Link>
 					</StyledLi>

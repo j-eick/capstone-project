@@ -39,8 +39,8 @@ const StyledChartDiv = styled.div`
 	margin: 90px 15px 0 15px;
 	padding: 5px;
 	border-radius: 15px;
+	background-color: #fff;
 	box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px, rgba(0, 0, 0, 0.15) 0 3px 6px;
-	background-color: #ffffff;
 `;
 
 // ################# COMPONENT #################

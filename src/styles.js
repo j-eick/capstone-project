@@ -23,6 +23,7 @@ export const GlobalStyle = createGlobalStyle`
 
 		/**** font | Roboto *****/
 		--font_roboto: 'Roboto', sans-serif;
+		--font_size_addRun: 1.3rem;
 	}
 
 	html {

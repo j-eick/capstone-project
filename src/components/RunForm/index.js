@@ -16,13 +16,13 @@ const StyledForm = styled.form`
 	padding: 40px 20px 20px;
 	border-radius: 0 0 30px 30px;
 	background-color: #fff;
-	font-size: var(--font_size_inputLabels);
 	box-shadow: rgba(0, 0, 0, 0.06) 0 3px 6px, 0 2px 6px 0 darkgray inset;
 	${({variant}) =>
 		variant === 'editRow' &&
 		css`
 			border-radius: 0 0 0 0;
 		`}
+	font-size: var(--font_size_inputLabels);
 `;
 
 const StyledInput = styled.input`
