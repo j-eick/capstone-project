@@ -9,14 +9,13 @@ const StyledNav = styled.nav`
 	display: flex;
 	position: fixed;
 	bottom: 0;
+	align-items: center;
 	width: 100%;
-	height: 7%;
-	background-color: #e5f0fa;
-	box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.4);
+	height: 8%;
+	background-color: #a0c0d6;
 `;
 const StyledUl = styled.ul`
 	display: flex;
-	position: relative;
 	flex-direction: row;
 	justify-content: space-around;
 	width: 100%;
@@ -25,6 +24,10 @@ const StyledUl = styled.ul`
 const StyledLi = styled.li`
 	list-style: none;
 `;
+// const StyledP = styled.p`
+// 	margin: 0;
+// 	padding: 0;
+// `;
 
 /*******************************************************
  * *********************  COMPONENT  *******************
@@ -38,7 +41,7 @@ export default function Nav() {
 					<StyledLi>
 						<Link href="/" aria-label="Home">
 							<a>
-								<MySVG variant="home" size="25px" color="black" />
+								<MySVG variant="home" size="25px" color="#545454" />
 							</a>
 						</Link>
 					</StyledLi>
