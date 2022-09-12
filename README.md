@@ -1,4 +1,4 @@
-# Hello and welcome to RunGraph 🏃🏃🏼‍♀️
+# Hello 👋🏼 and welcome to RunGraph 🏃🏃🏼‍♀️
 
 ### 💭 Backstory
 After a calve injury in 2015 the wound reopened a few times because of wrong treatment and insuffient recovery. It took me around 6 years to stabilize my calve to a point where I can run again without having to worry too much about literally running into the next injury. Until I got to this point I started my runs extremely carefully, by walking 100m, then slowly jogging 100m, then walking again and so on. <br> 
