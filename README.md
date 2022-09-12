@@ -13,7 +13,7 @@ Aside from visualising your past runs, RunGraph aims to inform you about your wo
 - Next workout
 - Hall of PBs
 
-![presentation](./public/presentation.png)
+![presentation](./public/presentation2.png)
 
 ## 📂 Tech-Stack
 
