@@ -1,27 +1,23 @@
-# Next.js App
+# Hello and welcome to RunGraph 🏃🏃🏼‍♀️
 
-This is a template for [Next.js](https://nextjs.org/) with additional tools.
+### Backstory
+After a calve injury in 2015 the wound reopened a few times because of wrong treatment and insuffient recovery. It took me around 6 years to stabilize my calve to a point where I can run again without having to worry too much about literally running into the next injury. Until I got to this point I started my runs extremely carefully, by walking 100m, then slowly jogging 100m, then walking again and so on. <br> 
+The pain in my calve had become quite characteristic and I knew what feeling I had to pay attention to in order to cancel the activity and be more careful overall. I wanted to keep track of my past runs to observe my overall progress and started a protocol with what distance at what intensity caused my xy amount of pain. <br>
+Fast forward a few months and the idea to create RunGraph was born.<br><br>
 
-<!-- toc -->
+**RunGraph** visualises run data by turning it into a diagram. Enter your _distance_, _time_, _pace_, _intensity_, optional _pain level_ and get a quick impression of your progress.
+Aside from visualising your past runs, RunGraph aims to inform you about your workouts, PBs and some more. Hence this project is gradually evolving.
 
--   [Tech-Stack](#tech-stack)
--   [Project Setup](#project-setup)
-    -   [Set up Vercel](#set-up-vercel)
-        -   [App](#app)
-        -   [Storybook](#storybook)
--   [Getting started](#getting-started)
--   [Test Driven Development](#test-driven-development)
--   [Commands](#commands)
--   Something
+### More features to come
+- Workout creator mode
+- Next workout
+- Hall of PBs
 
-<!-- tocstop -->
-
-It uses the following tools/libraries:
+![presentation](./public/presentation.png)
 
 ## Tech-Stack
 
 -   [Next.js](https://nextjs.org/)
--   [Storybook](https://storybook.js.org/)
 -   [Jest](https://jestjs.io/)
 -   [Testing Library](https://testing-library.com/)
 -   [Stylelint](https://stylelint.io/)
@@ -29,97 +25,3 @@ It uses the following tools/libraries:
 -   [Prettier](https://prettier.io/)
 -   [Husky](https://typicode.github.io/husky/)
 -   [Zustand](https://zustand-demo.pmnd.rs/)
-
-## Project Setup
-
-This project uses multiple Vercel deployments to make design/code reviews easier:
-
--   App Production
--   App Preview
--   Storybook Production
--   Storybook Preview
-
-### Set up Vercel
-
-Please follow this guide: https://vercel.com/docs/concepts/git
-
-#### App
-
-1.Follow the default setup for Next.js.
-
-#### Storybook
-
-1. Adjust the "Build and Output Settings"
-    - BUILD COMMAND: `npm run storybook:build`
-    - OUTPUT DIRECTORY: `./storybook-static`
-
-<p align="center"><img src="docs/resources/vercel-storybook.png" alt="Vercel Storybook settings" width="600"/></p>
-
-## Getting started
-
-**Run the development server:**
-
-```bash
-npm run dev
-```
-
-**Run storybook:**
-
-```shell
-npm run storybook
-```
-
-## Test Driven Development
-
-We use jest to write unit tests. Please look at the Documentation for [Jest](https://jestjs.io/)
-and [testing-library](https://testing-library.com/docs/react-testing-library/intro/).
-
-## Commands
-
-**Run the development server:**
-
-```bash
-npm run dev
-```
-
-**Build:**
-
-```shell
-npm run build
-```
-
-**Run storybook:**
-
-```shell
-npm run storybook
-```
-
-**Build storybook:**
-
-```shell
-npm run storybook:build
-```
-
-**Run all tests:**
-
-```shell
-npm run test
-```
-
-**Run stylelint**
-
-```shell
-npm run stylelint
-```
-
-**Run eslint**
-
-```shell
-npm run eslint
-```
-
-**Run all linters**
-
-```shell
-npm run lint
-```
