@@ -1,4 +1,3 @@
-// import {useState} from 'react';
 import styled from 'styled-components';
 
 const StyledTitleDiv = styled.div`
@@ -19,8 +18,6 @@ const StyledH1 = styled.h1`
 `;
 
 export default function HomeTitle() {
-	// const [title, setTitle] = useState(false);
-
 	return (
 		<StyledTitleDiv>
 			<StyledH1>Dashboard</StyledH1>
