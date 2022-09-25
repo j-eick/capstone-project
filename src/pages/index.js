@@ -1,6 +1,7 @@
 import Head from 'next/head';
 
-import HeaderHome from '../components/Header/home';
+import StyledH1 from '../components/Header/StyledH1';
+import StyledTitleDiv from '../components/Header/StyledTitleDiv';
 import Layout from '../components/Layout';
 import LineChart from '../components/RunChart';
 
@@ -13,7 +14,9 @@ export default function HomePage() {
 				<link rel="preconnect" href="https://fonts.googleapis.com" />
 				<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
 			</Head>
-			<HeaderHome />
+			<StyledTitleDiv>
+				<StyledH1>Dashboard</StyledH1>
+			</StyledTitleDiv>
 			<LineChart />
 		</Layout>
 	);
