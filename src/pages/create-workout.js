@@ -1,4 +1,4 @@
-import CreateWorkout from '../components/CreateWorkout/index';
+import CreateWorkout from '../components/CreateWorkout/form';
 import StyledH1 from '../components/Header/StyledH1';
 import StyledTitleContainer from '../components/Header/StyledTitleContainer';
 import Layout from '../components/Layout';
