@@ -5,10 +5,14 @@ export default function CreateWorkoutForm() {
 			<form>
 				<label>Pick a category</label>
 				<select name="category" id="categories">
-					<option placeholder="choose" value="warmup">
-						Warm-Up
+					<option value="choose" selected>
+						choose
 					</option>
-					<option value="saab">Saab</option>
+					<option value="warmup">Warm-Up</option>
+					<option value="core">Core</option>
+					<option value="legs">Legs</option>
+					<option value="torso">Torso</option>
+					<option value="shoulders">Shoulders</option>
 				</select>
 				<input />
 			</form>
