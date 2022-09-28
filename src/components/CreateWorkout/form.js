@@ -1,3 +1,5 @@
+// import {useStore} from 'zustand';
+
 import ButtonPlusWithBorder from '../buttons/plus';
 
 import {StyledForm, StyledP} from './styles';
@@ -24,12 +26,10 @@ export default function CreateWorkoutForm() {
 					<option value="shoulders">Shoulders</option>
 					<option value="hit">HIT</option>
 				</select>
-			</StyledForm>
-			<div>
 				<ButtonPlusWithBorder type="button" onClick={clickHandler}>
 					Add more
 				</ButtonPlusWithBorder>
-			</div>
+			</StyledForm>
 		</>
 	);
 }
