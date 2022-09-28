@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-const StyledPlusWithBorder = styled.button`
-	border-radius: 20px;
+const ButtonPlusWithBorder = styled.button`
+	border-radius: 15px;
 `;
 
-export default StyledPlusWithBorder;
+export default ButtonPlusWithBorder;
