@@ -1,14 +1,14 @@
 import CreateWorkout from '../components/CreateWorkout/form';
 import StyledH1 from '../components/Header/StyledH1';
-import StyledTitleContainer from '../components/Header/StyledTitleContainer';
+import StyledTitleDiv from '../components/Header/StyledTitleDiv';
 import Layout from '../components/Layout';
 
 export default function CreateWorkoutPage() {
 	return (
 		<Layout>
-			<StyledTitleContainer>
+			<StyledTitleDiv>
 				<StyledH1>Create Workout</StyledH1>
-			</StyledTitleContainer>
+			</StyledTitleDiv>
 			<CreateWorkout />
 		</Layout>
 	);
