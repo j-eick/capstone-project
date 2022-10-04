@@ -10,6 +10,7 @@ const StyledForm = styled.form`
 `;
 
 const StyledP = styled.p`
+	margin-top: 70px;
 	font-size: 1.5rem;
 `;
 
