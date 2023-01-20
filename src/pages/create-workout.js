@@ -1,15 +1,15 @@
+import CreateWorkout from '../components/CreateWorkout/form';
 import StyledH1 from '../components/Header/StyledH1';
 import StyledTitleDiv from '../components/Header/StyledTitleDiv';
 import Layout from '../components/Layout';
-import DataTable from '../components/Table';
 
-export default function RunProtocolPage() {
+export default function CreateWorkoutPage() {
 	return (
 		<Layout>
 			<StyledTitleDiv>
-				<StyledH1>Protocol</StyledH1>
+				<StyledH1>Create Workout</StyledH1>
 			</StyledTitleDiv>
-			<DataTable />
+			<CreateWorkout />
 		</Layout>
 	);
 }

@@ -7,8 +7,8 @@ import CollapsibleRow from '../CollapsibleRow';
  * ##################### STYLING #####################
  */
 const StyledTableContainer = styled.table`
-	width: 90vw;
-	margin: 50px auto;
+	width: 340px;
+	margin: 100px auto;
 	padding: 10px;
 	overflow: hidden;
 	border-collapse: collapse;

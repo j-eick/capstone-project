@@ -42,8 +42,6 @@ const StyledButton = styled.button`
  */
 export default function CollapsibleRow({cellData}) {
 	const [optionalRow, setOptionalRow] = useState(true);
-	// Implementation follows
-	// const [editClicked, setEditClicked] = useState(false);
 	const deleteEntry = useStore(state => state.deleteEntry);
 
 	return (
@@ -64,10 +62,6 @@ export default function CollapsibleRow({cellData}) {
 					<StyledButton variant="delete" onClick={() => deleteEntry(cellData.id)}>
 						Delete
 					</StyledButton>
-					{/* Implementation follows */}
-					{/* <StyledButton variant="edit" onClick={() => setEditClicked(!editClicked)}>
-						Edit
-					</StyledButton> */}
 				</StyledDiv>
 			)}
 		</>

@@ -34,27 +34,33 @@ const StyledLi = styled.li`
  */
 export default function Nav() {
 	return (
-		<>
-			<StyledNav>
-				<StyledUl>
-					{/* ******************  HOME  ************** */}
-					<StyledLi>
-						<Link href="/" aria-label="Home">
-							<a>
-								<MySVG variant="home" size="25px" color="#545454" />
-							</a>
-						</Link>
-					</StyledLi>
-					{/* ******************  PROTOCOL  ************** */}
-					<StyledLi>
-						<Link href="/run-protocol" aria-label="Run-Protocol">
-							<a>
-								<MySVG variant="list" size="25px" color="black" />
-							</a>
-						</Link>
-					</StyledLi>
-				</StyledUl>
-			</StyledNav>
-		</>
+		<StyledNav>
+			<StyledUl>
+				{/* ******************  HOME  ************** */}
+				<StyledLi>
+					<Link href="/" aria-label="Home">
+						<a>
+							<MySVG variant="home" size="25px" color="#545454" />
+						</a>
+					</Link>
+				</StyledLi>
+				{/* ******************  ADD WORKOUT  ************** */}
+				<StyledLi>
+					<Link href="/create-workout" aria-label="Create-Workout">
+						<a>
+							<MySVG variant="createWorkout" size="25px" color="#545454" />
+						</a>
+					</Link>
+				</StyledLi>
+				{/* ******************  PROTOCOL  ************** */}
+				<StyledLi>
+					<Link href="/run-protocol" aria-label="Run-Protocol">
+						<a>
+							<MySVG variant="list" size="25px" color="black" />
+						</a>
+					</Link>
+				</StyledLi>
+			</StyledUl>
+		</StyledNav>
 	);
 }
