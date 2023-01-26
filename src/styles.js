@@ -5,6 +5,8 @@ export const GlobalStyle = createGlobalStyle`
 	*::before,
 	*::after {
 		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
 	}
 
 	:root {
@@ -31,16 +33,9 @@ export const GlobalStyle = createGlobalStyle`
 	}
 
 	body {
-		display: flex;
-		flex-direction: column;
-		margin: 0;
-		padding: 0;
+		min-height: 100vh;
 		background-color: #f6fafd;
 		font-family: 'Exo 2', sans-serif;
-	}
-
-	nav {
-		width: 375px;
 	}
 
 	a {
