@@ -24,10 +24,8 @@ const StyledUl = styled.ul`
 const StyledLi = styled.li`
 	list-style: none;
 `;
-// const StyledP = styled.p`
-// 	margin: 0;
-// 	padding: 0;
-// `;
+
+console.clear();
 
 /*******************************************************
  * *********************  COMPONENT  *******************
