@@ -1,5 +1,5 @@
-import StyledH1 from '../components/Header/StyledH1';
-import StyledTitleDiv from '../components/Header/StyledTitleDiv';
+import StyledH1 from '../components/Header.jsx';
+import StyledTitleDiv from '../components/Header.jsx';
 import Layout from '../components/Layout';
 import DataTable from '../components/Table';
 

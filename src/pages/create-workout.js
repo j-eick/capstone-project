@@ -1,13 +1,17 @@
+import {useRouter} from 'next/router';
+
 import CreateWorkout from '../components/CreateWorkout/form';
-import StyledH1 from '../components/Header/StyledH1';
-import StyledTitleDiv from '../components/Header/StyledTitleDiv';
+import StyledH1 from '../components/Header';
+import StyledTitleDiv from '../components/Header';
 import Layout from '../components/Layout';
 
 export default function CreateWorkoutPage() {
+	const router = useRouter();
+
 	return (
 		<Layout>
 			<StyledTitleDiv>
-				<StyledH1>Create Workout</StyledH1>
+				{router.asPath === `create-workout` ? <StyledH1>Create Workout</StyledH1> : null}
 			</StyledTitleDiv>
 			<CreateWorkout />
 		</Layout>
