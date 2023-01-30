@@ -8,6 +8,21 @@ export const GlobalStyle = createGlobalStyle`
 		margin: 0;
 		padding: 0;
 	}
+	ol, ul {
+		list-style: none;
+	}
+	blockquote, q {
+		quotes: none;
+	}
+	blockquote::before, blockquote::after,
+	q::before, q::after {
+		content: '';
+		content: none;
+	}
+	table {
+		border-spacing: 0;
+		border-collapse: collapse;
+	}
 
 	:root {
 		--fontsize_title: 2.5rem;
@@ -29,12 +44,14 @@ export const GlobalStyle = createGlobalStyle`
 	}
 
 	html {
+		background-color: black;
 		font-size: 62.5%;
 	}
 
 	body {
 		min-height: 100vh;
-		background-color: #f6fafd;
+		background-color: red;
+		background-color: lightcoral;
 		font-family: 'Exo 2', sans-serif;
 	}
 

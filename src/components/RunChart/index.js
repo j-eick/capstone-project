@@ -35,9 +35,8 @@ ChartJS.register(
 // ################# STYLING #################
 
 const StyledChartDiv = styled.div`
-	height: auto;
-	margin: 90px 15px 0 15px;
-	padding: 5px;
+	/* height: auto; */
+	margin: 0 15px 0 15px;
 	border-radius: 15px;
 	background-color: #fff;
 	box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px, rgba(0, 0, 0, 0.15) 0 3px 6px;
